@@ -32,8 +32,9 @@ Button → GPIO 4
 
 ## Files
 
-- `firmware/digital_dice.ino` — Arduino code
-- `hardware/` — KiCad schematic
+- `digital_dice.ino` — Arduino code
+- `matrix display.kicad_sch` — KiCad schematic
+- `matrix display.kicad_pro`
 
 ## Build
 
