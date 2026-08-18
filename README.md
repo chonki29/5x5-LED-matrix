@@ -1,125 +1,42 @@
-DIY 5x5 LED Matrix Digital Dice
+# DIY 5x5 LED Matrix Digital Dice
 
-A custom-built 5x5 LED matrix controlled by an ESP32 and used as a digital dice.
+A DIY 5x5 LED matrix made with 25 LEDs, an ESP32 and a zero PCB.
 
-Features
+The matrix can display numbers 1–6 and works as a simple digital dice. Pressing the button generates a random number and shows a short rolling animation before displaying the result.
 
-Custom 5x5 LED matrix built on zero PCB
+## Hardware
 
-ESP32 control
+- ESP32
+- 25 LEDs
+- 5 × 330Ω resistors
+- Push button
+- Zero PCB
 
-5x5 multiplexed LED display
+## Pinout
 
-330Ω current-limiting resistors on the column lines
+Rows:
+- P1 → GPIO 22
+- P2 → GPIO 19
+- P3 → GPIO 23
+- P4 → GPIO 18
+- P5 → GPIO 5
 
-Push button on GPIO 4
+Columns:
+- N1 → GPIO 27
+- N2 → GPIO 26
+- N3 → GPIO 25
+- N4 → GPIO 33
+- N5 → GPIO 32
 
-Random dice results from 1 to 6
+Button → GPIO 4
 
-Rolling animation before showing the final result
+## Files
 
-Custom 5x5 patterns for each number
+- `firmware/digital_dice.ino` — Arduino code
+- `hardware/` — KiCad schematic
 
-Hardware
+## Build
 
-ESP32 development board
+Designed in KiCad, soldered onto a zero PCB and programmed using Arduino IDE.
 
-25 LEDs
-
-5 × 330Ω resistors
-
-Push button
-
-Zero PCB / perfboard
-
-Connecting wire
-
-Pinout
-
-Positive / row lines
-
-Matrix line
-
-ESP32 GPIO
-
-P1
-
-22
-
-P2
-
-19
-
-P3
-
-23
-
-P4
-
-18
-
-P5
-
-5
-
-Negative / column lines
-
-Matrix line
-
-ESP32 GPIO
-
-N1
-
-27
-
-N2
-
-26
-
-N3
-
-25
-
-N4
-
-33
-
-N5
-
-32
-
-Each negative/column line passes through a 330Ω resistor.
-
-Button
-
-Button signal: GPIO 4
-
-Other side of button: GND
-
-The code uses the ESP32 internal pull-up with INPUT_PULLUP.
-
-How it works
-
-The 5x5 matrix is multiplexed by rapidly activating one row at a time while selecting the LEDs that should be lit in that row. The refresh is fast enough that the display appears continuously illuminated.
-
-When the button is pressed, the ESP32 generates a number from 1 to 6 and displays a short rolling animation before showing the final result.
-
-Software
-
-The firmware is written in C++ for the Arduino framework and is intended to be compiled/uploaded using Arduino IDE.
-
-AI assistance was used during development of the C++ code because I am still learning C++. The hardware design, physical construction, wiring, testing, and project integration were done as part of this project.
-
-Project Files
-
-firmware/digital_dice.ino — ESP32 Arduino firmware
-
-hardware/ — KiCad schematic/project files
-
-Demo
-
-A demonstration video is provided through the Stardance project submission.
-
-Project Status
-
-Completed — hardware assembled, firmware tested, and digital dice demonstrated.
+ChatGPT was used to assist with the C++ code.
