@@ -15,29 +15,35 @@ The matrix can display numbers 1–6 and works as a simple digital dice. Pressin
 ## Pinout
 
 Rows:
-- P1 → GPIO 22
-- P2 → GPIO 19
-- P3 → GPIO 23
-- P4 → GPIO 18
-- P5 → GPIO 5
+
+- R1 → GPIO 22
+- R2 → GPIO 19
+- R3 → GPIO 23
+- R4 → GPIO 18
+- R5 → GPIO 5
 
 Columns:
-- N1 → GPIO 27
-- N2 → GPIO 26
-- N3 → GPIO 25
-- N4 → GPIO 33
-- N5 → GPIO 32
+
+- C1 → GPIO 27
+- C2 → GPIO 26
+- C3 → GPIO 25
+- C4 → GPIO 33
+- C5 → GPIO 32
 
 Button → GPIO 4
 
 ## Files
 
-- `digital_dice.ino` — Arduino code
-- `matrix display.kicad_sch` — KiCad schematic
-- `matrix display.kicad_pro`
+- `firmware/digital_dice.ino`    — ESP32 code
+- `PCB/matrix display.kicad_sch` — KiCad schematic
+- `PCB/matrix display.kicad_pro` — KiCad project
+- `PCB/matrix display.kicad_pcb` — KiCad PCB layout
+- `BOM.csv` — Bill of Materials
 
 ## Build
 
 Designed in KiCad, soldered onto a zero PCB and programmed using Arduino IDE.
 
-ChatGPT was used to assist with the C++ code.
+ChatGPT was used to assist with the C++ code 
+
+thanks for checking out my project :)))
