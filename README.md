@@ -1,10 +1,14 @@
 # DIY 5x5 LED Matrix Digital Dice
 
 A DIY 5x5 LED matrix made with 25 LEDs, an ESP32 and a zero PCB.
+<img width="1605" height="907" alt="matrix display" src="https://github.com/user-attachments/assets/1ac6a3d6-e873-45a8-94e5-8a9602d8fee2" />
+
 
 The matrix can display numbers 1–6 and works as a simple digital dice. Pressing the button generates a random number and shows a short rolling animation before displaying the result.
+<img width="1522" height="1033" alt="display" src="https://github.com/user-attachments/assets/29e51395-2c5a-4ac4-9a4a-116b7b33296c" />
 
 ## Hardware
+
 
 - ESP32
 - 25 LEDs
